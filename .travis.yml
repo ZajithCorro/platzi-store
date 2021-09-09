@@ -1,4 +1,4 @@
-lanlenguage: node_js
+language: node_js
 cache:
   directories:
     - node_modules
@@ -9,6 +9,12 @@ git:
   depth: 3
 script:
   - yarn build
+notifications:
+  email:
+    recipients:
+    - zaja_9508@hotmail.com
+    on_success: always
+    on_failure: always
 deploy:
   provider: pages
   skip_cleanup: true
